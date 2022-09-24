@@ -4,13 +4,12 @@
 // 645 -> 5
 // 78 -> третьей цифры нет
 // 32679 -> 6
-int Number = Convert.ToInt32(Console.ReadLine ());
-string NumberText = Convert.ToString(Number);
-if (NumberText.Length > 2) 
-{
-    Console.Write ("3-я цифра -> " + NumberText[2]);
-}
+int n = Convert.ToInt32(Console.ReadLine ());
+if (n < 100) 
+    Console.WriteLine ("Третьей цифры нет");
 else 
 {
-    Console.Write ("-> 3-ей цифры нет");
+    while (n > 1000)
+       n= n /10;
+    Console.WriteLine ($"Третья цифра числа: {n % 10}");
 }
